@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class EnemyController : MonoBehaviour {
 
     private Rigidbody myRB;
@@ -11,9 +13,12 @@ public class EnemyController : MonoBehaviour {
 
     public PlayerController thePlayer;
 
+    private NavMeshAgent agent;
+
 	void Start () {
         myRB = GetComponent<Rigidbody>();
         thePlayer = FindObjectOfType<PlayerController>();
+        agent = GetComponent<NavMeshAgent>();
 	}
 	
     void FixedUpdate ()   {
@@ -26,6 +31,7 @@ public class EnemyController : MonoBehaviour {
 	void Update () {
         if (!isDead)
         {
+            agent.SetDestination(thePlayer.transform.position);
             transform.LookAt(thePlayer.transform.position);
         }
 	}
