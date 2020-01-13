@@ -17,11 +17,12 @@ namespace Zombies.pickups
         public void ReceiveItemType(ItemType type)
         {
             incomingPickUpType = type;
+            ActivatePickUp();
         }
 
         private void ActivatePickUp()
         {
-            BulletController cmp = gameObject.GetComponentInChildren<GunController>().GetComponent<BulletController>();
+            BulletController cmp = gameObject.transform.GetChild(0).GetComponent<BulletController>();
 
             switch (incomingPickUpType)
             {

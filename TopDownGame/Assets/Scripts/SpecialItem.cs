@@ -18,7 +18,7 @@ namespace Zombies.pickups
             if(other.gameObject.tag == "Player")
             {
                 Globals<ItemType>.OnItemPickUpCaller(currentType);
-                Destroy(this, 1f);
+                Destroy(gameObject, 1f);
             }
         }
             
