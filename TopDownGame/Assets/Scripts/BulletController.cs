@@ -48,7 +48,6 @@ public class BulletController : MonoBehaviour {
         if (collission.gameObject.tag == "Scenery")
         {
 
-            Destroy(gameObject);
             ContactPoint contact = collission.contacts[0];
             Quaternion rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
             Vector3 pos = contact.point;
