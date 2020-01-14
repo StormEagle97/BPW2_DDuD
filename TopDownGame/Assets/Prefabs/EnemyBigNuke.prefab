@@ -2113,8 +2113,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 238116168150335179, guid: aafdaf6bc4ca6dd45a285c648f239199,
         type: 3}
-      propertyPath: radius
-      value: 5
+      propertyPath: damageToGivePlayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aafdaf6bc4ca6dd45a285c648f239199, type: 3}
