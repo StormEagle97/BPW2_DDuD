@@ -22,7 +22,7 @@ namespace Zombies.pickups
 
         private void ActivatePickUp()
         {
-            BulletController cmp = gameObject.transform.GetChild(0).GetComponent<BulletController>();
+            BulletController cmp = gameObject.transform.GetChild(0).GetComponent<GunController>().bullet;
 
             switch (incomingPickUpType)
             {
@@ -36,6 +36,7 @@ namespace Zombies.pickups
                     break;
                 case ItemType.movementSpeed:
                     gameObject.GetComponent<PlayerController>().moveSpeed *= 2;
+                    StartCoroutine(ReturnMovementSPeed());
                     break;
                 case ItemType.dubblePoints:
                     gameObject.GetComponent<PointScript>().Score += 400;
@@ -45,6 +46,12 @@ namespace Zombies.pickups
                 
             
             }
+        }
+
+        private IEnumerator ReturnMovementSPeed()
+        {
+            yield return new WaitForSeconds(5f);
+            gameObject.GetComponent<PlayerController>().moveSpeed /= 2;
         }
 
         private IEnumerator SetBack(bool fl, BulletController input)

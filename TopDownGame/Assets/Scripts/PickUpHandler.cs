@@ -31,14 +31,16 @@ namespace Zombies.pickups
         public float SpawnTimeBetween;
         private void Start()
         {
-            InvokeRepeating("SpawnRandomPickUp", 1f, SpawnTimeBetween);
+            //InvokeRepeating("SpawnRandomPickUp", 1f, SpawnTimeBetween);
+            StartCoroutine(SpawnRandomPickUp());
         }
 
-        private IEnumerator SpawnRandomPickUp()
+        public IEnumerator SpawnRandomPickUp()
         {
             int randomNumm = Random.Range(0, Items.Count);
             SpawnGameObject(Items[randomNumm].Prefab);
             yield return new WaitForSeconds(SpawnTimeBetween);
+            StartCoroutine(SpawnRandomPickUp());
         }
 
         private void SpawnGameObject(GameObject prefab)
