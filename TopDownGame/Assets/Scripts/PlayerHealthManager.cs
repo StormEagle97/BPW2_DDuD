@@ -33,7 +33,15 @@ public class PlayerHealthManager : MonoBehaviour {
     void Update () {
 		if(currentHealth <-0)
         {
-            SceneManager.LoadScene(0);
+            int tmpScore = PlayerPrefs.GetInt("HighScoreWave");
+            if (tmpScore == null)
+                tmpScore = 0;
+            if (pointScript.Wave > tmpScore)
+            {
+                Globals<int>.OnHighScoreChangedHandler(pointScript.Wave);
+                Globals<int>.OnHighScorePointsChangedHandler(pointScript.Score);
+            }
+            SceneManager.LoadScene(2);
         }
 
         if(flashCounter > 0)

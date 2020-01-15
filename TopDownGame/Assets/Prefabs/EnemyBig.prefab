@@ -921,6 +921,7 @@ GameObject:
   - component: {fileID: 114637616097819236}
   - component: {fileID: 54658649015049238}
   - component: {fileID: 95242706090576414}
+  - component: {fileID: 2770362150157882905}
   m_Layer: 0
   m_Name: EnemyBig
   m_TagString: Enemy
@@ -936,7 +937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433376963096082}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.467969, y: -0.202436, z: 3.3969274}
+  m_LocalPosition: {x: -10.902031, y: -0.202436, z: -5.033073}
   m_LocalScale: {x: 1.6974325, y: 1.6974328, z: 1.6974328}
   m_Children:
   - {fileID: 4465991827471814}
@@ -1063,6 +1064,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!195 &2770362150157882905
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433376963096082}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &1434798838991424
 GameObject:
   m_ObjectHideFlags: 0
