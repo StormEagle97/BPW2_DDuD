@@ -701,7 +701,6 @@ GameObject:
   - component: {fileID: 7738329665762083349}
   - component: {fileID: 7652029567632434279}
   - component: {fileID: 7755490090445206127}
-  - component: {fileID: 9007879215581978404}
   m_Layer: 0
   m_Name: EnemyBigNuke
   m_TagString: Enemy
@@ -717,7 +716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7707418451740153443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0379686, y: -0.202436, z: 4.6669273}
+  m_LocalPosition: {x: 14.467969, y: -0.202436, z: 3.3969274}
   m_LocalScale: {x: 1.6974325, y: 1.6974328, z: 1.6974328}
   m_Children:
   - {fileID: 7709188750492272055}
@@ -845,28 +844,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!195 &9007879215581978404
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7707418451740153443}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &7707435121207079473
 GameObject:
   m_ObjectHideFlags: 0
